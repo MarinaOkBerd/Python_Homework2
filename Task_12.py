@@ -1,8 +1,16 @@
-import unittest
+#Задача 12: Петя и Катя – брат и сестра. Петя – студент, а Катя – школьница.
+# Петя помогает Кате по математике. Он задумывает два натуральных числа X и Y (X,Y≤1000), а Катя должна их отгадать.
+# Для этого Петя делает две подсказки. Он называет сумму этих чисел S и их произведение P. Помогите Кате отгадать задуманные Петей числа.
+import math
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+x = int(input("Введите число X от 1 до 1000"))
+y = int(input("Введите число Y от 1 до 1000"))
+s = x + y
+p = x * y
+z = int((s ** 2 - 4 * p) ** 0.5)
+result_x = int((s - z) / 2)
+result_y = int((s + z) / 2)
+print(result_x, result_y)
 
-if __name__ == '__main__':
-    unittest.main()
+
+
