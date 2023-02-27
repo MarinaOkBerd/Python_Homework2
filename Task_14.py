@@ -2,9 +2,6 @@
 
 n = int(input())
 x = 0
-y = 1
-while y <= n:
-    y = 2 ** x
-    if y <= n:
-        print(y, end=" ")
-        x += 1
+while 2 ** x <= n:
+    print(2 ** x)
+    x += 1
